@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+         <meta charset="UTF-8">
+         <link rel="stylesheet" href="style.css">
+         <script src="https://kit.fontawesome.com/404edfa668.js" crossorigin="anonymous"></script>
+         <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+         <title>Rock, Paper Scissors: The Game</title>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Welcome to Rock, Paper, Scissors: The Game</h1>
+            <button id="restart" class="restart-btn">Restart Game</button>
+            <div id="score" class="score">
+                <p>Player: 0</p>
+                <p>Computer: 0</p>
+            </div>
+        </header>
+        <div class = "choiceDisplay" id = "choiceDisplay">
+            <i id ="result" class = "result"></i>
+        </div>
+        <div class="score-border">
+            <h2>Choose your weapon:</h2>
+            <div class="choices">
+                <i id="rock" class="choice fas fa-hand-rock fa-10x"></i>
+                <i id="paper" class="choice fas fa-hand-paper fa-10x"></i>
+                <i id="scissors" class="choice fas fa-hand-scissors fa-10x"></i>
+        </div>
+        </div>
+        <div class = "instructions"> 
+            How to play Rock, Paper, Scissors: The Game
+            <ul style="list-style-type:none" class="instructionList" >
+                <li>1. Choose Rock, Paper, or Scissors</li>
+                <li>2. Computer will make their choice</li>
+                <li>3. Rock beats Scissors, Scissors beats Paper, and Paper beats Rock </li>
+                <li>4. First player to 5 points, wins the game. </li>
+                <li>   </li>
+                <li> Good Luck!!</li>
+            </ul>
+        </div>
+        <div class = "endGame">
+            <p>What Happened?</p>
+            <p class="thanks">Thank you for playing! </p>
+
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal">
+        <div id="result" class="modal-content"></div>
+    </div>
+        
+
+    <script src="JavaScript.js"></script> </script>
+</body>
+</html>
