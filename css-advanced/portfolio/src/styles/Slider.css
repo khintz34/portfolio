@@ -1,0 +1,49 @@
+#sliderContainer {
+  background-color: black;
+  color: white;
+  height: 15vh;
+  white-space: nowrap;
+  display: flex;
+  gap: 5vw;
+}
+
+.slider {
+  position: relative;
+  height: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slideItem {
+  height: 15vh;
+  width: 15vh;
+  opacity: 0;
+  transition-duration: 1s ease;
+  border: 1px solid orange;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slideItem.slideActive {
+  opacity: 1;
+  transition-duration: 1s;
+  transform: scale(1.08);
+}
+
+.right-arrow {
+  position: absolute;
+  top: 50%;
+  right: 2vw;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.left-arrow {
+  position: absolute;
+  top: 50%;
+  left: 2vw;
+  cursor: pointer;
+  z-index: 10;
+}
