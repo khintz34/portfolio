@@ -1,53 +1,31 @@
 import React, { useContext, useEffect, useState } from "react";
 import "../../styles/Slider.css";
-import carPic from "../../assets/images/car-in.png";
-import oceanPic from "../../assets/images/ocean-in.png";
-import ppPic from "../../assets/images/pp.jpeg";
-import {
-  faArrowAltCircleRight,
-  faArrowAltCircleLeft,
-} from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { SliderData } from "../../assets/data/SliderData";
+
+//todo transitions so the box appear to slide in and out
+//todo media quiery so large screens have more boxes
 
 const Slider = () => {
   const [current, setCurrent] = useState(0);
-  const SliderData = [
-    {
-      skill: "JavaScript",
-    },
-    {
-      skill: "HTML",
-    },
-    {
-      skill: "CSS",
-    },
-    {
-      skill: "React",
-    },
-    {
-      skill: "VS Code",
-    },
-  ];
+  const [startSlide, setStartSlide] = useState(true);
 
   const [sliderArray, setSliderArray] = useState([
     SliderData[0],
     SliderData[1],
+    SliderData[2],
+    SliderData[3],
   ]);
 
   const sliderLength = SliderData.length;
 
   const nextSlide = () => {
-    // console.log("current", current);
     setCurrent(current === sliderLength - 1 ? 0 : current + 1);
     let newArray = sliderArray;
     newArray.shift();
-    let num = current + 2;
+    let num = current + 1;
     if (num >= sliderLength) {
       num = 0;
     }
-    // console.log("num", num);
-    console.log(newArray[0]);
-    console.log(SliderData[num]);
     if (SliderData[num]["skill"] === newArray[0]["skill"]) {
       let newNum = num + 1;
       newArray.push(SliderData[newNum]);
@@ -55,11 +33,34 @@ const Slider = () => {
       newArray.push(SliderData[num]);
     }
     setSliderArray(newArray);
+    if (startSlide) {
+      setStartSlide(false);
+    } else {
+      setStartSlide(true);
+    }
   };
 
   const prevSlide = () => {
     console.log("prev");
     setCurrent(current === 0 ? sliderLength - 1 : current - 1);
+    let newArray = sliderArray;
+    newArray.pop();
+    let num = current - 1;
+    if (num <= 0) {
+      num = sliderLength - 1;
+    }
+    if (SliderData[num]["skill"] === newArray[0]["skill"]) {
+      let newNum = num - 1;
+      newArray.unshift(SliderData[newNum]);
+    } else {
+      newArray.unshift(SliderData[num]);
+    }
+    setSliderArray(newArray);
+    if (startSlide) {
+      setStartSlide(false);
+    } else {
+      setStartSlide(true);
+    }
   };
 
   useEffect(() => {
@@ -67,37 +68,26 @@ const Slider = () => {
     console.log(sliderArray);
   }, [current]);
 
+  useEffect(() => {
+    function testing() {
+      console.log("testing n0w");
+    }
+    setTimeout(nextSlide, 5000);
+  }, [startSlide]);
+
+  function runSlides() {
+    if (startSlide) {
+      nextSlide();
+      setTimeout(runSlides, 5000);
+    }
+  }
+
   return (
     <div id="sliderContainer" className="slider">
-      <FontAwesomeIcon
-        icon={faArrowAltCircleLeft}
-        className="left-arrow"
-        onClick={prevSlide}
-        onTouchStart={prevSlide}
-      />
-      <FontAwesomeIcon
-        icon={faArrowAltCircleRight}
-        className="right-arrow"
-        onClick={nextSlide}
-      />
-      {/* <img src={carPic} /> */}
       {sliderArray.map((item, index) => {
-        // console.log(item.image);
         return (
-          <div
-            // className={
-            // index === current ? "slideItem slideActive" : "slideItem"
-            // }
-            key={index}
-          >
-            <div
-              className={
-                "slideItem slideActive"
-                // " slideItem slideActive"
-              }
-            >
-              {item.skill}
-            </div>
+          <div key={index}>
+            <div className={"slideItem slideActive"}>{item.skill}</div>
           </div>
         );
       })}

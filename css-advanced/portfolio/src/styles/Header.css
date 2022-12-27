@@ -8,6 +8,10 @@
   flex-direction: row;
   padding-left: 4vw;
   padding-right: 4vw;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  opacity: 0.9;
 }
 
 #rightHeaderLarge {

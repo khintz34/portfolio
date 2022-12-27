@@ -1,10 +1,17 @@
 #aboutTitle {
   color: white;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   font-size: 3vh;
   padding: 2vw;
+  text-align: left;
+  /* width: 70vw; */
+}
+
+#aboutTitle > h1 {
+  padding: 0;
+  padding-left: 2vw;
+  margin: 0;
 }
 
 #aboutMain {
@@ -16,6 +23,7 @@
   color: white;
   font-size: 2.5vh;
   padding: 3vh;
+  background-color: black;
 }
 
 .aboutParaClass {
@@ -50,16 +58,18 @@
     border-color: orange;
   }
 }
-
+/* ! media query for mobile screen */
 @media (max-width: 600px) {
   .typewriter h1 {
     animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
   }
 }
 
-@media (min-width: 600px) {
+/* ! media query for large screen */
+@media (min-width: 1000px) {
   #aboutMain {
     flex-direction: row;
+    margin-top: 5vh;
   }
 
   .typewriter h1 {
@@ -74,5 +84,31 @@
     width: 60vw;
     font-size: 5vh;
     padding: 5vh;
+  }
+}
+
+/* ! media query for ipad screen */
+@media (min-width: 550px) and (max-width: 999px) {
+  .typewriter h1 {
+    width: 98vw;
+    font-size: 10vh;
+    overflow: auto;
+    white-space: normal;
+    /* animation: typing 3.5s steps(10, end), blink-caret 0.75s step-end 20; */
+    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+  }
+
+  #aboutPara {
+    font-size: 4vh;
+    padding: 5vh;
+  }
+
+  #aboutTitle {
+    width: 98vw;
+    height: 10vh;
+  }
+
+  #aboutMain {
+    margin-top: 0vh;
   }
 }

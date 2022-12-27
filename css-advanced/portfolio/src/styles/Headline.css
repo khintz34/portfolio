@@ -1,0 +1,122 @@
+#headlineContainer {
+  color: white;
+  height: 40vh;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.headingTitle {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#heading1 {
+  margin-left: 25vw;
+  font-size: 7vh;
+}
+#heading2 {
+  margin-left: 8vw;
+  font-size: 7vh;
+}
+#heading3 {
+  margin-left: auto;
+  margin-right: 20vw;
+  color: aliceblue;
+}
+#heading4 {
+  margin-left: auto;
+  margin-right: 18vw;
+  color: aliceblue;
+}
+
+.arrow {
+  display: none;
+}
+
+.line2 {
+  width: 100vw;
+  height: 10vh;
+  border-bottom: 10px solid orange;
+  -webkit-transform: translateY(6vh) translateX(5px) rotate(-30deg);
+  position: absolute;
+  top: 10vh;
+  left: -13px;
+}
+
+/* ! large browser media query */
+
+@media (min-width: 1000px) {
+  #headlineContainer {
+    height: 90vh;
+  }
+
+  .line2 {
+    width: 110vw;
+    height: 0vh;
+    -webkit-transform: translateY(45vh) translateX(-15vh) rotate(-28deg);
+    position: absolute;
+    top: 10vh;
+    left: 8vh;
+  }
+
+  #heading1 {
+    margin-left: 25vw;
+    font-size: 18vh;
+  }
+  #heading2 {
+    margin-left: 8vw;
+    font-size: 18vh;
+  }
+  #heading3 {
+    margin-right: 20vw;
+    font-size: 15vh;
+  }
+  #heading4 {
+    margin-right: 18vw;
+    font-size: 15vh;
+  }
+}
+
+/* ! ipad media query */
+
+@media (min-width: 550px) and (max-width: 999px) {
+  #headlineContainer {
+    height: 90vh;
+    padding-top: 10vh;
+  }
+
+  .line2 {
+    width: 110vw;
+    height: 0vh;
+    -webkit-transform: translateY(32vh) translateX(-15vh) rotate(-33deg);
+    position: absolute;
+    top: 10vh;
+    left: 10vh;
+  }
+
+  #heading1 {
+    margin-left: 25vw;
+    font-size: 10vh;
+  }
+  #heading2 {
+    margin-left: 8vw;
+    font-size: 10vh;
+  }
+  #heading3 {
+    margin-right: 20vw;
+    font-size: 10vh;
+  }
+  #heading4 {
+    margin-right: 18vw;
+    font-size: 10vh;
+  }
+  .arrow {
+    font-size: 10vh;
+    color: orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15vh;
+  }
+}

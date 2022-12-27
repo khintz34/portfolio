@@ -4,12 +4,21 @@ import ppPic from "../images/pp.jpeg";
 
 export const SliderData = [
   {
-    image: "../../assets/images/car-in.png",
+    skill: "JavaScript",
   },
   {
-    image: "../../assets/images/ocean-in.png",
+    skill: "HTML",
   },
   {
-    image: "../../assets/images/pp.jpeg",
+    skill: "CSS",
+  },
+  {
+    skill: "React",
+  },
+  {
+    skill: "VS Code",
+  },
+  {
+    skill: "NPM",
   },
 ];

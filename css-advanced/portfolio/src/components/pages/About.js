@@ -1,13 +1,15 @@
 import React, { useContext } from "react";
 import "../../styles/About.css";
 import Slider from "./Slider";
+import { faArrowAltCircleDown } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function About() {
   return (
     <div id="aboutContainer">
       <div id="aboutMain">
         <div id="aboutTitle" className="typewriter">
-          <h1>Kevin Codes</h1>
+          <h1>About Me</h1>
         </div>
         <div id="aboutPara">
           <div className="aboutParaClass">

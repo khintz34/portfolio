@@ -24,6 +24,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  /* animation: moveLeft 4s infinite forwards; */
 }
 
 .slideItem.slideActive {
@@ -46,4 +47,13 @@
   left: 2vw;
   cursor: pointer;
   z-index: 10;
+}
+
+@keyframes moveLeft {
+  from {
+    translate: 0vw;
+  }
+  to {
+    translate: -15vw;
+  }
 }
