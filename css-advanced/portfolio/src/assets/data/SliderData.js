@@ -1,7 +1,3 @@
-import carPic from "../images/car-in.png";
-import oceanPic from "../images/ocean-in.png";
-import ppPic from "../images/pp.jpeg";
-
 export const SliderData = [
   {
     skill: "JavaScript",
@@ -20,5 +16,56 @@ export const SliderData = [
   },
   {
     skill: "NPM",
+  },
+  {
+    skill: "GIT",
+  },
+  {
+    skill: "Webpack",
+  },
+  {
+    skill: "Firebase",
+  },
+  {
+    skill: "Redux",
+  },
+];
+
+export const sliderDataSmall = [
+  {
+    skill: "JavaScript",
+  },
+  {
+    skill: "HTML",
+  },
+  {
+    skill: "CSS",
+  },
+  {
+    skill: "React",
+  },
+];
+
+export const sliderDataLarge = [
+  {
+    skill: "JavaScript",
+  },
+  {
+    skill: "HTML",
+  },
+  {
+    skill: "CSS",
+  },
+  {
+    skill: "React",
+  },
+  {
+    skill: "VS Code",
+  },
+  {
+    skill: "NPM",
+  },
+  {
+    skill: "GIT",
   },
 ];

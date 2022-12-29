@@ -6,7 +6,9 @@ import "../../styles/Headline.css";
 function Headline() {
   return (
     <div id="headlineContainer">
-      <div className="line2"></div>
+      <div className="lineContainer">
+        <div className="line2"></div>
+      </div>
       <h1 className="headingTitle" id="heading1">
         Kevin
       </h1>

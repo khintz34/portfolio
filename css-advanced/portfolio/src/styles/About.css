@@ -5,7 +5,6 @@
   font-size: 3vh;
   padding: 2vw;
   text-align: left;
-  /* width: 70vw; */
 }
 
 #aboutTitle > h1 {
@@ -36,6 +35,8 @@
   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   letter-spacing: 0.15em; /* Adjust as needed */
+  color: rgb(130, 130, 130);
+  font-style: italic;
 }
 
 /* The typing effect */
@@ -73,7 +74,7 @@
   }
 
   .typewriter h1 {
-    width: 40vw;
+    /* width: 40vw; */
     font-size: 18vh;
     overflow: auto;
     white-space: normal;
@@ -82,7 +83,7 @@
 
   #aboutPara {
     width: 60vw;
-    font-size: 5vh;
+    font-size: 4vh;
     padding: 5vh;
   }
 }
@@ -99,7 +100,7 @@
   }
 
   #aboutPara {
-    font-size: 4vh;
+    font-size: 3.5vh;
     padding: 5vh;
   }
 

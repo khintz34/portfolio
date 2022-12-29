@@ -4,6 +4,11 @@ import Main from "./components/pages/Main";
 import { BrowserRouter, Routes, Route, HashRouter } from "react-router-dom";
 import { NavbarOpenContext } from "./contexts/NavbarOpenContext.js";
 
+//todo typewriter functionality
+//todo sidebar/navbar
+//todo update about para
+//todo set links
+
 function App() {
   const [navbarOpen, setNavbarOpen] = useState(false);
 

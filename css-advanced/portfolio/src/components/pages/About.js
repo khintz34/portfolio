@@ -1,8 +1,6 @@
 import React, { useContext } from "react";
 import "../../styles/About.css";
 import Slider from "./Slider";
-import { faArrowAltCircleDown } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function About() {
   return (

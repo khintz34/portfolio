@@ -1,0 +1,22 @@
+#footerContainer {
+  background-color: orange;
+  padding: 2vh 10vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 10vh;
+  font-size: 1.8vh;
+}
+
+.footerBold {
+  font-weight: bolder;
+}
+
+.footerNotes > p {
+  margin-top: 0;
+}
+
+#top {
+  font-size: 3vh;
+}

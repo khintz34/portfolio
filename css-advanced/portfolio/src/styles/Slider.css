@@ -5,6 +5,8 @@
   white-space: nowrap;
   display: flex;
   gap: 5vw;
+  overflow: hidden;
+  padding: 2vh 0 2vh 0;
 }
 
 .slider {
