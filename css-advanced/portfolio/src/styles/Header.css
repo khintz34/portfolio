@@ -1,18 +1,21 @@
 #headerContainer {
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.9);
   height: 10vh;
   color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
+
   padding-left: 4vw;
   padding-right: 4vw;
   position: sticky;
   top: 0;
   z-index: 1000;
-  opacity: 0.9;
-  /* width: 100vw; */
+  margin: 0;
+}
+
+.headerContainerClass {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
 }
 
 #rightHeaderLarge {
@@ -59,17 +62,16 @@
 .menuNav {
   overflow-y: scroll;
   list-style: none;
-  position: fixed;
-  top: 10;
+  position: absolute;
+  top: 6.5vh;
   background: darkcyan;
-  right: 0;
-  bottom: 0;
+  right: -4vw;
   height: 90vh;
-  width: 0;
-  overflow: hidden;
   max-width: 290px;
   z-index: 9;
   margin: 0;
+  display: block;
+  width: 100vw;
 }
 
 .menuNav.hideNav {
@@ -79,6 +81,7 @@
 .menuNav.showMenu {
   width: 100vw;
   display: block;
+  opacity: 1;
 }
 
 a {

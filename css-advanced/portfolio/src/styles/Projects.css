@@ -3,6 +3,7 @@
   color: white;
   margin-top: 10vh;
   margin-bottom: 10vh;
+  scroll-margin: 10vh;
 }
 
 #portfolioHeader {
@@ -84,6 +85,10 @@
 
   #projectMain {
     width: 40vw;
+  }
+
+  .projectPara {
+    height: 26vh;
   }
 }
 

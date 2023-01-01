@@ -3,6 +3,7 @@
   color: white;
   overflow: hidden;
   height: 75vh;
+  scroll-margin: 10vh;
 }
 
 #contactHeader {

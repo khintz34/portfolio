@@ -9,6 +9,7 @@ function Project(props) {
   const openGitURL = () => {
     window.open(props.github);
   };
+
   return (
     <div id="projectContainer">
       <div id="projectMain">

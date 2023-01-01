@@ -5,6 +5,7 @@
   font-size: 3vh;
   padding: 2vw;
   text-align: left;
+  scroll-margin: 10vh;
 }
 
 #aboutTitle > h1 {
