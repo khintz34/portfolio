@@ -34,9 +34,15 @@
   border-radius: 20px;
 }
 
+.projectImageContainer {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
 .projectPic {
-  height: 35vh;
-  max-width: 90vw;
+  max-width: 95%;
+  max-height: auto;
 }
 
 .projectPara {
@@ -88,7 +94,7 @@
   }
 
   .projectPara {
-    height: 26vh;
+    height: 35vh;
   }
 }
 

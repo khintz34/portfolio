@@ -12,7 +12,7 @@ function Contact(props) {
     window.open("https://github.com/khintz34");
   };
   return (
-    <div id="contactContainer">
+    <div id="contactContainer" ref={props.contactRef}>
       <div id="contactHeader" className="typewriter">
         <h1>Contact</h1>
       </div>

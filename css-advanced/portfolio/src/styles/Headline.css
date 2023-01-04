@@ -4,7 +4,7 @@
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
-  overflow: hidden;
+  scroll-margin: 10vh;
 }
 
 .headingTitle {
@@ -48,6 +48,10 @@
 .lineContainer {
   overflow: hidden;
   width: 70vw;
+}
+
+.faArrow:hover {
+  color: white;
 }
 
 /* ! large browser media query */

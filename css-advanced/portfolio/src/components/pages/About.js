@@ -2,11 +2,11 @@ import React, { useContext } from "react";
 import "../../styles/About.css";
 import Slider from "./Slider";
 
-function About() {
+function About(props) {
   return (
     <div id="aboutContainer">
       <div id="aboutMain">
-        <div id="aboutTitle" className="typewriter">
+        <div id="aboutTitle" className="typewriter" ref={props.aboutRef}>
           <h1>About Me</h1>
         </div>
         <div id="aboutPara">

@@ -3,9 +3,15 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import "../../styles/Headline.css";
 
-function Headline() {
+function Headline(props) {
+  const scrollTo = () => {
+    props.aboutRef.current.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
   return (
-    <div id="headlineContainer">
+    <div id="headlineContainer" ref={props.headlineRef}>
       <div className="lineContainer">
         <div className="line2"></div>
       </div>
@@ -22,7 +28,11 @@ function Headline() {
         Developer
       </h1>
       <div className="arrow">
-        <FontAwesomeIcon icon={faArrowAltCircleDown} />
+        <FontAwesomeIcon
+          icon={faArrowAltCircleDown}
+          className="faArrow"
+          onClick={scrollTo}
+        />
       </div>
     </div>
   );

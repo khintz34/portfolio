@@ -1,16 +1,13 @@
 import React from "react";
 import "../../styles/Projects.css";
 import Project from "./Project";
-import projectPic from "../../assets/images/projectPic.png";
 import hipcamp from "../../assets/images/hipcamp.png";
 import ispy from "../../assets/images/ispy.png";
 import dadmode from "../../assets/images/dadmode.png";
 
-function PortfolioContainer() {
-  const findHeights = () => {};
-
+function PortfolioContainer(props) {
   return (
-    <div id="portfolioContainer">
+    <div id="portfolioContainer" ref={props.portfolioRef}>
       <div id="portfolioHeader" className="typewriter">
         <h1>Portfolio</h1>
       </div>

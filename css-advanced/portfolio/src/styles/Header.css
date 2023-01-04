@@ -2,16 +2,15 @@
   background-color: rgba(0, 0, 0, 0.9);
   height: 10vh;
   color: white;
-
   padding-left: 4vw;
   padding-right: 4vw;
   position: sticky;
-  top: 0;
   z-index: 1000;
   margin: 0;
+  top: 0;
 }
 
-.headerContainerClass {
+.headerMain {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -35,7 +34,7 @@
   margin-right: auto;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1000px) {
   #rightHeaderSmall {
     display: block;
   }
@@ -49,6 +48,7 @@
 
 .navBar {
   position: relative;
+  display: block;
 }
 
 .navBar button {
@@ -63,25 +63,23 @@
   overflow-y: scroll;
   list-style: none;
   position: absolute;
-  top: 6.5vh;
-  background: darkcyan;
-  right: -4vw;
+  top: 10vh;
+  background-color: darkcyan;
+  padding-left: 10vw;
   height: 90vh;
-  max-width: 290px;
   z-index: 9;
   margin: 0;
   display: block;
-  width: 100vw;
-}
-
-.menuNav.hideNav {
-  display: none;
-}
-
-.menuNav.showMenu {
-  width: 100vw;
-  display: block;
   opacity: 1;
+  transition: 1s;
+  right: -10vw;
+}
+
+.showMenu {
+  width: 100%;
+}
+.menuNav.hideNav {
+  width: 0%;
 }
 
 a {
@@ -94,16 +92,28 @@ a {
 }
 
 .menuNav li:first-child {
-  margin-top: 7rem;
+  margin-top: 5rem;
 }
 
 .menuItem {
   font-size: 2.2vh;
   padding-bottom: 2vh;
+  border: 3px solid white;
+  width: 50vw;
+  max-width: 300px;
+  border-radius: 25px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 2vh;
+  font-size: 3vh;
+  margin-bottom: 2vh;
 }
 
 .menuItem:hover {
-  text-decoration: underline;
+  background-color: black;
+  color: white;
+  transform: scale(1.1);
 }
 
 .xBtnContainer {
@@ -121,4 +131,10 @@ a {
   color: orange;
   font-size: 2.5vh;
   font-weight: bolder;
+}
+
+.largeHeader:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  color: orange;
 }

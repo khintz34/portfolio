@@ -1,36 +1,32 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useRef } from "react";
 import "../../styles/Header.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { NavbarOpenContext } from "../../contexts/NavbarOpenContext";
 
-//todo slide in navbar
-//todo width 100vw navbar
-
-function Header() {
+function Header(props) {
+  console.log(props);
   const { navbarOpen, setNavbarOpen } = useContext(NavbarOpenContext);
-  const [navbarShow, setNavbarShow] = useState("hideNav");
 
   const closeMenu = () => {
     setNavbarOpen(false);
   };
 
-  const scrollAbout = () => {
-    const about = document.getElementById("aboutTitle");
-    about.scrollIntoView({ behavior: "smooth", block: "start" });
-    closeMenu();
-  };
+  const scrollTo = (num) => {
+    let item;
 
-  const scrollPortfolio = () => {
-    const portfolio = document.getElementById("portfolioContainer");
-    portfolio.scrollIntoView({ behavior: "smooth", block: "start" });
-    closeMenu();
-  };
+    if (num === 1) {
+      item = props.aboutRef.current;
+    } else if (num === 2) {
+      item = props.portfolioRef.current;
+    } else if (num === 3) {
+      item = props.contactRef.current;
+    } else {
+      item = props.headlineRef.current;
+    }
 
-  const scrollContact = () => {
-    const contact = document.getElementById("contactContainer");
-    contact.scrollIntoView({ behavior: "smooth", block: "start" });
-    closeMenu();
+    item.scrollIntoView({ behavior: "smooth", block: "start" });
+    closeMenu(0);
   };
 
   const handleToggle = () => {
@@ -39,35 +35,47 @@ function Header() {
 
   return (
     <div id="headerContainer" className="headerContainerClass">
-      <p id="leftHeader">Kevin Hintz</p>
-      <div id="rightHeaderLarge">
-        <p onClick={scrollAbout}>About</p>
-        <p onClick={scrollPortfolio}>Portfolio</p>
-        <p onClick={scrollContact}>Contact</p>
-      </div>
+      <div className="headerMain">
+        <p id="leftHeader" className="largeHeader" onClick={() => scrollTo(4)}>
+          Kevin Hintz
+        </p>
+        <div id="rightHeaderLarge">
+          <p onClick={() => scrollTo(1)} className="largeHeader">
+            About
+          </p>
+          <p onClick={() => scrollTo(2)} className="largeHeader">
+            Portfolio
+          </p>
+          <p onClick={() => scrollTo(3)} className="largeHeader">
+            Contact
+          </p>
+        </div>
 
-      <nav id="rightHeaderDropdown" className="navBar">
-        {!navbarOpen ? (
-          <div onClick={handleToggle} id="rightHeaderSmall">
-            <FontAwesomeIcon icon={faBars} className="iconWidth openBtn" />
-          </div>
-        ) : (
-          <div onClick={handleToggle} className="xBtnContainer">
-            <div className="iconWidth openBtn xBtn">X</div>
-          </div>
-        )}
+        <nav id="rightHeaderDropdown" className="navBar">
+          {!navbarOpen ? (
+            <div onClick={handleToggle} id="rightHeaderSmall">
+              <FontAwesomeIcon icon={faBars} className="iconWidth openBtn" />
+            </div>
+          ) : (
+            <div onClick={handleToggle} className="xBtnContainer">
+              <div className="iconWidth openBtn xBtn">X</div>
+            </div>
+          )}
+        </nav>
+      </div>
+      <div id="sideNav" className="sideNav">
         <ul className={`menuNav ${navbarOpen ? " showMenu" : " hideNav"}`}>
-          <li className="menuItem" onClick={scrollAbout} exact="true">
+          <li className="menuItem" onClick={() => scrollTo(1)} exact="true">
             About
           </li>
-          <li className="menuItem" onClick={scrollPortfolio} exact="true">
+          <li className="menuItem" onClick={() => scrollTo(2)} exact="true">
             Portfolio
           </li>
-          <li className="menuItem" onClick={scrollContact} exact="true">
+          <li className="menuItem" onClick={() => scrollTo(3)} exact="true">
             Contact
           </li>
         </ul>
-      </nav>
+      </div>
     </div>
   );
 }

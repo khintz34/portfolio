@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useRef } from "react";
 import { NavbarOpenContext } from "../../contexts/NavbarOpenContext";
 import "../../styles/Main.css";
 import About from "./About";
@@ -16,13 +16,23 @@ function Main() {
     }
   };
 
+  const aboutRef = useRef(null);
+  const portfolioRef = useRef(null);
+  const contactRef = useRef(null);
+  const headlineRef = useRef(null);
+
   return (
     <div id="mainContainer" onClick={(e) => checkClickLocation(e)}>
-      <Header />
-      <Headline />
-      <About />
-      <PortfolioContainer />
-      <Contact />
+      <Header
+        aboutRef={aboutRef}
+        portfolioRef={portfolioRef}
+        contactRef={contactRef}
+        headlineRef={headlineRef}
+      />
+      <Headline headlineRef={headlineRef} aboutRef={aboutRef} />
+      <About aboutRef={aboutRef} />
+      <PortfolioContainer portfolioRef={portfolioRef} />
+      <Contact contactRef={contactRef} />
       <Footer />
     </div>
   );
