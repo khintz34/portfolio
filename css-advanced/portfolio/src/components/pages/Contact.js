@@ -11,6 +11,11 @@ function Contact(props) {
   const openGitURL = () => {
     window.open("https://github.com/khintz34");
   };
+
+  const mailTo = (e) => {
+    window.open("mailto:khintz34@gmail.com");
+    e.preventDefault();
+  };
   return (
     <div id="contactContainer" ref={props.contactRef}>
       <div id="contactHeader" className="typewriter">
@@ -35,7 +40,11 @@ function Contact(props) {
           <p className="contactMsg">-- LinkedIn</p>
         </div>
         <div className="iconHolder">
-          <FontAwesomeIcon icon={faEnvelope} className="contactIcon" />
+          <FontAwesomeIcon
+            icon={faEnvelope}
+            className="contactIcon"
+            onClick={(e) => mailTo(e)}
+          />
           <p className="contactMsg">-- Email</p>
         </div>
       </div>

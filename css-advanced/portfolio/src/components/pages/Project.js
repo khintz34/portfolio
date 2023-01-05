@@ -1,7 +1,22 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "../../styles/Projects.css";
 
 function Project(props) {
+  const [videoStatus, setVideoStatus] = useState(false);
+
+  const videoRef = useRef(null);
+
+  const [videoStyle, setVideoStyle] = useState("hideVideo");
+  const [imageStyle, setImageStyle] = useState("showVideo");
+
+  useEffect(() => {
+    if (videoStatus) {
+      videoRef.current.play();
+    } else {
+      videoRef.current.pause();
+    }
+  }, [videoStatus]);
+
   const goToURL = () => {
     window.open(props.live);
   };
@@ -10,15 +25,44 @@ function Project(props) {
     window.open(props.github);
   };
 
+  const playVideo = (e) => {
+    setVideoStatus(true);
+    setVideoStyle("showVideo");
+    setImageStyle("hideVideo");
+  };
+
+  const pauseVideo = (e) => {
+    setVideoStatus(false);
+    setVideoStyle("hideVideo");
+    setImageStyle("showVideo");
+  };
+
   return (
     <div id="projectContainer">
-      <div id="projectMain">
+      <div
+        id="projectMain"
+        onMouseOver={(e) => playVideo(e)}
+        onMouseOut={(e) => pauseVideo(e)}
+      >
         <h1 className="projectName">{props.name}</h1>
         <div className="projectImageContainer">
-          <img src={props.image} alt={props.alt} className="projectPic" />
+          <img
+            src={props.image}
+            alt="imageTag"
+            className={`projectPic ${imageStyle}`}
+          ></img>
+          <video
+            className={`projectPic ${videoStyle}`}
+            poster={props.image}
+            onMouseOver={(e) => playVideo(e)}
+            onMouseOut={(e) => pauseVideo(e)}
+            src={props.video}
+            ref={videoRef}
+          ></video>
         </div>
-        <div>
-          <p className="projectPara">{props.para}</p>
+        <div className="projectPara">
+          <p>{props.para}</p>
+          <p className="clickToSee">Click on image to see a live demo</p>
         </div>
         <div className="projectLinksContainer">
           <button className="codeBtn" onClick={goToURL}>
