@@ -16,8 +16,7 @@ function About(props) {
             working as an application developer, coding in COBOL and JCL, on the
             mainframe at a large financial institution. The reason why I have
             gotten into front-end dev work is to usher in the current age of
-            fast paced agile dev and away from the prehistoric ways of writing
-            on the mainframe.
+            fast paced agile development and to create innovative web apps.
           </div>
           <div className="aboutParaClass">
             Away from the keyboard you can find me playing soccer, hanging with
