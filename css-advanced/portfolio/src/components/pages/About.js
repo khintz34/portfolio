@@ -11,12 +11,12 @@ function About(props) {
         </div>
         <div id="aboutPara">
           <div className="aboutParaClass">
-            Hi, my name is Kevin. I am a self-taught front-end engineer
-            specializing in JavaScript and React development. Currently I am
-            working as an application developer, coding in COBOL and JCL, on the
-            mainframe at a large financial institution. The reason why I have
-            gotten into front-end dev work is to usher in the current age of
-            fast paced agile development and to create innovative web apps.
+            Hi, my name is Kevin. I am a software engineer with a passion for
+            Web Development! Currently I am working for a large finanical
+            organization coding in COBOL and JCL and on the mainframe. The
+            reason why I have gotten into front-end dev work is to usher in the
+            current age of fast paced agile development and to create innovative
+            web apps.
           </div>
           <div className="aboutParaClass">
             Away from the keyboard you can find me playing soccer, hanging with
