@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import "../../styles/Projects.css";
 
+//todo on touch start touch end etc for mobile video plays
+
 function Project(props) {
   const [videoStatus, setVideoStatus] = useState(false);
 
@@ -37,13 +39,25 @@ function Project(props) {
     setImageStyle("showVideo");
   };
 
+  const decideVideo = (e) => {
+    if (videoStatus) {
+      setVideoStatus(false);
+      setVideoStyle("hideVideo");
+      setImageStyle("showVideo");
+    } else {
+      setVideoStatus(false);
+      setVideoStyle("hideVideo");
+      setImageStyle("showVideo");
+    }
+  };
+
   return (
     <div id="projectContainer">
       <div
         id="projectMain"
         onMouseOver={(e) => playVideo(e)}
         onMouseOut={(e) => pauseVideo(e)}
-        onFocus={(e) => playVideo(e)}
+        onTouchStart={(e) => playVideo(e)}
       >
         <h1 className="projectName">{props.name}</h1>
         <div className="projectImageContainer">
@@ -60,6 +74,7 @@ function Project(props) {
             onFocus={(e) => playVideo(e)}
             src={props.video}
             ref={videoRef}
+            muted="muted"
           ></video>
         </div>
         <div className="projectPara">

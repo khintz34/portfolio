@@ -24,6 +24,7 @@
   transition-duration: 1s ease;
   border: 1px solid orange;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   /* animation: moveLeft 4s infinite forwards; */
@@ -33,6 +34,15 @@
   opacity: 1;
   transition-duration: 1s;
   transform: scale(1.08);
+}
+
+.skillImage {
+  font-size: 6vh;
+}
+
+.skillItem {
+  position: absolute;
+  bottom: 5px;
 }
 
 .right-arrow {

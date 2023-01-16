@@ -1,10 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import "../../styles/Slider.css";
-import {
-  SliderData,
-  sliderDataSmall,
-  sliderDataLarge,
-} from "../../assets/data/SliderData";
+import { SliderData } from "../../assets/data/SliderData";
 
 //todo transitions so the box appear to slide in and out
 
@@ -12,38 +8,12 @@ const Slider = () => {
   const [current, setCurrent] = useState(0);
   const [startSlide, setStartSlide] = useState(true);
   const screenWidth = window.innerWidth;
-  const [sliderLength, setSliderLength] = useState(0);
-  const [sliderArray, setSliderArray] = useState([]);
-
-  useEffect(() => {
-    if (screenWidth > 550) {
-      setSliderArray([
-        SliderData[0],
-        SliderData[1],
-        SliderData[2],
-        SliderData[3],
-        SliderData[4],
-        SliderData[5],
-        SliderData[6],
-      ]);
-    }
-  }, []);
-
-  useEffect(() => {
-    setSliderLength(sliderArray.length);
-  }, [sliderArray]);
+  const [sliderArray, setSliderArray] = useState(SliderData);
+  const [sliderLength, setSliderLength] = useState(SliderData.length);
 
   const nextSlide = () => {
-    let newArray = [];
-    if (sliderArray.length === 0) {
-      if (screenWidth <= 550) {
-        newArray = sliderDataSmall;
-      } else {
-        newArray = sliderDataLarge;
-      }
-    } else {
-      newArray = sliderArray;
-    }
+    let newArray = sliderArray;
+
     setCurrent(current === sliderLength - 1 ? 0 : current + 1);
     newArray.shift();
     let num = current + 1;
@@ -53,6 +23,7 @@ const Slider = () => {
     if (SliderData[num]["skill"] === newArray[0]["skill"]) {
       let newNum = num + 1;
       newArray.push(SliderData[newNum]);
+      console.log(SliderData[num]["skill"]);
     } else {
       newArray.push(SliderData[num]);
     }
@@ -73,7 +44,10 @@ const Slider = () => {
       {sliderArray.map((item, index) => {
         return (
           <div key={index}>
-            <div className={"slideItem slideActive"}>{item.skill}</div>
+            <div className="slideItem slideActive">
+              <i className={`${item.image} skillImage`}></i>
+              <div className="skillItem"> {item.skill}</div>
+            </div>
           </div>
         );
       })}
