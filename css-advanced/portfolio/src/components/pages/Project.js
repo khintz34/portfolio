@@ -57,7 +57,6 @@ function Project(props) {
         id="projectMain"
         onMouseOver={(e) => playVideo(e)}
         onMouseOut={(e) => pauseVideo(e)}
-        onTouchStart={(e) => playVideo(e)}
       >
         <h1 className="projectName">{props.name}</h1>
         <div className="projectImageContainer">
@@ -72,6 +71,7 @@ function Project(props) {
             onMouseOver={(e) => playVideo(e)}
             onMouseOut={(e) => pauseVideo(e)}
             onFocus={(e) => playVideo(e)}
+            onTouchStart={(e) => playVideo(e)}
             src={props.video}
             ref={videoRef}
             muted="muted"
