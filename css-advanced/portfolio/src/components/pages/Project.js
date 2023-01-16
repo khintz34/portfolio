@@ -76,6 +76,7 @@ function Project(props) {
             src={props.video}
             ref={videoRef}
             muted="muted"
+            playsInline
           ></video>
         </div>
         <div className="projectPara">
