@@ -7,6 +7,31 @@
   gap: 5vw;
   overflow: hidden;
   padding: 2vh 0 2vh 0;
+  justify-content: flex-end;
+  transition: 10s;
+  position: relative;
+  left: 0;
+}
+
+#sliderHolder {
+  position: absolute;
+  left: 100vw;
+  display: flex;
+  flex-direction: row;
+  gap: 5vw;
+  animation: linear infinite normal;
+  animation-name: mover;
+  animation-duration: 18s;
+  animation-delay: -2s;
+}
+
+@keyframes mover {
+  0% {
+    left: 100vw;
+  }
+  100% {
+    left: -410vw;
+  }
 }
 
 .slider {
@@ -67,5 +92,35 @@
   }
   to {
     translate: -15vw;
+  }
+}
+
+@media (min-width: 1000px) {
+  #sliderHolder {
+    animation-duration: 20s;
+    animation-delay: -3s;
+  }
+  @keyframes mover {
+    0% {
+      left: 100vw;
+    }
+    100% {
+      left: -150vw;
+    }
+  }
+}
+
+@media (min-width: 601px) and (max-width: 999px) {
+  #sliderHolder {
+    animation-duration: 20s;
+    animation-delay: -3s;
+  }
+  @keyframes mover {
+    0% {
+      left: 100vw;
+    }
+    100% {
+      left: -300vw;
+    }
   }
 }

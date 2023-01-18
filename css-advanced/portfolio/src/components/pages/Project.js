@@ -1,9 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import "../../styles/Projects.css";
 
-//todo on touch start touch end etc for mobile video plays
-// todo video playing in new screen on mobile
-
 function Project(props) {
   const [videoStatus, setVideoStatus] = useState(false);
 
