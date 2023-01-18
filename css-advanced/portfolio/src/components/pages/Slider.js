@@ -1,11 +1,8 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../../styles/Slider.css";
 import { SliderData } from "../../assets/data/SliderData";
 
-//todo transitions so the box appear to slide in and out
-
 const Slider = () => {
-  const [sliderArray, setSliderArray] = useState(SliderData);
   const [startSlide, setStartSlide] = useState(true);
 
   const nextSlide = () => {
