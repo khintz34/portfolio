@@ -52,6 +52,111 @@
   font-size: 3vh;
 }
 
+.contactFormContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1vh;
+  margin-top: 1vh;
+}
+
+.formInput {
+  width: 90vw;
+  padding-left: 0.5vw;
+  border: 2px solid white;
+  background-color: orange;
+}
+
+.formInput:focus {
+  background-color: white;
+}
+
+.smallInput {
+  height: 3vh;
+}
+
+.submitBtnContainer {
+  width: 90vw;
+  display: flex;
+  justify-content: center;
+  margin-top: 1vh;
+}
+
+.contactSubmitBtn {
+  font-size: 2vh;
+  width: 35vw;
+  border-radius: 25px;
+  border: 3px solid orange;
+}
+
+.contactSubmitBtn:hover {
+  cursor: pointer;
+  background-color: orange;
+  border: 3px solid white;
+  transform: scale(1.1);
+}
+
 /* ! media query for large screen */
 @media (min-width: 1000px) {
+  #contactContainer {
+    padding-bottom: 5vh;
+  }
+  .formInput {
+    width: 30vw;
+    /* border-radius: 25px; */
+    padding-left: 0.5vw;
+    border: 2px solid white;
+    background-color: orange;
+  }
+
+  .smallInput {
+    height: 3vh;
+  }
+
+  .submitBtnContainer {
+    width: 30vw;
+    display: flex;
+    justify-content: center;
+    margin-top: 1vh;
+  }
+
+  .contactSubmitBtn {
+    width: 15vw;
+    border-radius: 25px;
+    border: 3px solid orange;
+  }
+
+  .contactSubmitBtn:hover {
+    cursor: pointer;
+    background-color: orange;
+    border: 3px solid white;
+    transform: scale(1.1);
+  }
+}
+
+/* ! media query for ipad screen */
+@media (min-width: 601px) and (max-width: 999px) {
+  .formInput {
+    width: 60vw;
+    font-size: 1.8vh;
+  }
+
+  .submitBtnContainer {
+    width: 60vw;
+  }
+
+  .contactSubmitBtn {
+    width: 30vw;
+    height: 4vh;
+    font-size: 2.2vh;
+    border-radius: 25px;
+    border: 3px solid orange;
+  }
+
+  .contactSubmitBtn:hover {
+    cursor: pointer;
+    background-color: orange;
+    border: 3px solid white;
+    transform: scale(1.1);
+  }
 }
