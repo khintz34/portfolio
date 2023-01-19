@@ -107,9 +107,16 @@
   .clickToSee {
     display: none;
   }
+
+  .projectImageContainer {
+    height: 35vh;
+  }
 }
 
-@media (min-width: 550px) and (max-width: 999px) {
+@media (min-width: 601px) and (max-width: 999px) {
+  .projectImageContainer {
+    height: 35vh;
+  }
 }
 
 .hideVideo {
