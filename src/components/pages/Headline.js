@@ -22,10 +22,10 @@ function Headline(props) {
         Hintz
       </h1>
       <h1 className="headingTitle" id="heading3">
-        Web
+        Software
       </h1>
       <h1 className="headingTitle" id="heading4">
-        Developer
+        Engineer
       </h1>
       <div className="arrow">
         <FontAwesomeIcon

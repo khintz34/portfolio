@@ -89,21 +89,6 @@ function Contact(props) {
             </button>
           </div>
         </form>
-        <br></br>
-        <div className="iconHolder">
-          <i
-            className="devicon-github-original contactIcon"
-            onClick={openGitURL}
-          ></i>
-          <p className="contactMsg">-- GitHub</p>
-        </div>
-        <div className="iconHolder">
-          <i
-            className="devicon-linkedin-plain contactIcon"
-            onClick={goToURL}
-          ></i>
-          <p className="contactMsg">-- LinkedIn</p>
-        </div>
       </div>
     </div>
   );

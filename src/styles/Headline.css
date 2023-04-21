@@ -22,12 +22,12 @@
 }
 #heading3 {
   margin-left: auto;
-  margin-right: 20vw;
+  margin-right: 10vw;
   color: aliceblue;
 }
 #heading4 {
   margin-left: auto;
-  margin-right: 18vw;
+  margin-right: 23vw;
   color: aliceblue;
 }
 
@@ -80,12 +80,12 @@
     font-size: 18vh;
   }
   #heading3 {
-    margin-right: 30vw;
+    margin-right: 10vw;
     font-size: 15vh;
   }
   #heading4 {
     margin-right: 18vw;
-    font-size: 15vh;
+    font-size: 18vh;
   }
 }
 

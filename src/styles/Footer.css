@@ -1,12 +1,13 @@
 #footerContainer {
   background-color: orange;
-  padding: 2vh 10vh;
+  padding: 2vh 1vh;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: flex-start;
   height: 10vh;
   font-size: 1.8vh;
+  width: 100vw;
 }
 
 .footerBold {
@@ -19,4 +20,22 @@
 
 #top {
   font-size: 3vh;
+}
+
+.footerIcons {
+  height: 100%;
+  display: flex;
+  gap: 1vw;
+  color: black;
+  align-items: center;
+}
+
+.contactIcon {
+  font-size: 5vh;
+  color: black;
+}
+
+.contactIcon:hover {
+  background-color: black;
+  color: orange;
 }
