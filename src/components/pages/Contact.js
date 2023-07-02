@@ -11,13 +11,7 @@ function Contact(props) {
 
   const form = useRef();
 
-  const goToURL = () => {
-    window.open("https://www.linkedin.com/in/kevin-p-hintz");
-  };
-
-  const openGitURL = () => {
-    window.open("https://github.com/khintz34");
-  };
+ 
 
   const sendMessage = (e) => {
     e.preventDefault();

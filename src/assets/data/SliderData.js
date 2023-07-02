@@ -54,4 +54,9 @@ export const SliderData = [
     image: "devicon-gitlab-plain",
     num: 10,
   },
+  {
+    skill: "Next.js",
+    image: "devicon-nextjs-original",
+    num: 11,
+  },
 ];

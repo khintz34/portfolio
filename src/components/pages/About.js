@@ -13,9 +13,10 @@ function About(props) {
           <div className="aboutParaClass">
             Hi, my name is Kevin. I am a software engineer with a passion for
             Web Development! Currently I am working for a large finanical
-            organization coding in COBOL/JCL on the mainframe. The reason why I
-            have gotten into front-end dev work is to usher in the current age
-            of fast paced agile development and to create innovative web apps.
+            organization as a backend engineer working on a system that services
+            millions of transactions every day. The reason why I have gotten
+            into front-end dev work because I love taking data and turning it
+            into a user-friendly interactive web app.
           </div>
           <div className="aboutParaClass">
             Away from the keyboard you can find me with my family, playing
