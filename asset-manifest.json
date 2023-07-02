@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.cade4cd2.css",
-    "main.js": "/portfolio/static/js/main.96524829.js",
+    "main.css": "/portfolio/static/css/main.125387e4.css",
+    "main.js": "/portfolio/static/js/main.5e7008af.js",
     "static/js/787.1ed0c42c.chunk.js": "/portfolio/static/js/787.1ed0c42c.chunk.js",
     "static/media/hipcampDemo.mp4": "/portfolio/static/media/hipcampDemo.3970457062284aff40eb.mp4",
     "static/media/dadmodeDemo.mp4": "/portfolio/static/media/dadmodeDemo.a96d971485b8410e8b8c.mp4",
@@ -9,13 +9,16 @@
     "static/media/ispy.png": "/portfolio/static/media/ispy.93d9604f3600ac720af2.png",
     "static/media/hipcamp.png": "/portfolio/static/media/hipcamp.28455e16bf658d22bb26.png",
     "static/media/dadmode.png": "/portfolio/static/media/dadmode.a40ca0005b4bf8ed7063.png",
+    "static/media/footballapi.png": "/portfolio/static/media/footballapi.00f46b60ad38a6fe5809.png",
+    "static/media/milk.png": "/portfolio/static/media/milk.f9fe355ae9a3617725b0.png",
+    "static/media/workout.png": "/portfolio/static/media/workout.e19dbb3ba50c860cdb98.png",
     "index.html": "/portfolio/index.html",
-    "main.cade4cd2.css.map": "/portfolio/static/css/main.cade4cd2.css.map",
-    "main.96524829.js.map": "/portfolio/static/js/main.96524829.js.map",
+    "main.125387e4.css.map": "/portfolio/static/css/main.125387e4.css.map",
+    "main.5e7008af.js.map": "/portfolio/static/js/main.5e7008af.js.map",
     "787.1ed0c42c.chunk.js.map": "/portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.cade4cd2.css",
-    "static/js/main.96524829.js"
+    "static/css/main.125387e4.css",
+    "static/js/main.5e7008af.js"
   ]
 }
