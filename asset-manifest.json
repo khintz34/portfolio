@@ -1,12 +1,15 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.125387e4.css",
-    "main.js": "/portfolio/static/js/main.5e7008af.js",
+    "main.js": "/portfolio/static/js/main.36dc2846.js",
     "static/js/787.1ed0c42c.chunk.js": "/portfolio/static/js/787.1ed0c42c.chunk.js",
     "static/media/hipcampDemo.mp4": "/portfolio/static/media/hipcampDemo.3970457062284aff40eb.mp4",
+    "static/media/footballDemo.mp4": "/portfolio/static/media/footballDemo.a6b712276a98cff6a57d.mp4",
+    "static/media/workoutDemo.mp4": "/portfolio/static/media/workoutDemo.0f0dfae961ecd7e4569d.mp4",
     "static/media/dadmodeDemo.mp4": "/portfolio/static/media/dadmodeDemo.a96d971485b8410e8b8c.mp4",
     "static/media/ispyDemo.mp4": "/portfolio/static/media/ispyDemo.ede458269722e9fa3a43.mp4",
     "static/media/ispy.png": "/portfolio/static/media/ispy.93d9604f3600ac720af2.png",
+    "static/media/milkDemo.mp4": "/portfolio/static/media/milkDemo.6a7d3cf9a372527a9be0.mp4",
     "static/media/hipcamp.png": "/portfolio/static/media/hipcamp.28455e16bf658d22bb26.png",
     "static/media/dadmode.png": "/portfolio/static/media/dadmode.a40ca0005b4bf8ed7063.png",
     "static/media/footballapi.png": "/portfolio/static/media/footballapi.00f46b60ad38a6fe5809.png",
@@ -14,11 +17,11 @@
     "static/media/workout.png": "/portfolio/static/media/workout.e19dbb3ba50c860cdb98.png",
     "index.html": "/portfolio/index.html",
     "main.125387e4.css.map": "/portfolio/static/css/main.125387e4.css.map",
-    "main.5e7008af.js.map": "/portfolio/static/js/main.5e7008af.js.map",
+    "main.36dc2846.js.map": "/portfolio/static/js/main.36dc2846.js.map",
     "787.1ed0c42c.chunk.js.map": "/portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.125387e4.css",
-    "static/js/main.5e7008af.js"
+    "static/js/main.36dc2846.js"
   ]
 }
