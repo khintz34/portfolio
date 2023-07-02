@@ -51,6 +51,10 @@
   max-height: auto;
 }
 
+.projectName {
+  text-align: center;
+}
+
 .projectPara {
   max-width: 90vw;
   border-bottom: 5px solid orange;
