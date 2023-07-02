@@ -10,9 +10,9 @@ import workout from "../../assets/images/workout.png";
 import dadmodeDemo from "../../assets/videos/dadmodeDemo.mp4";
 import hipcampDemo from "../../assets/videos/hipcampDemo.mp4";
 import ispyDemo from "../../assets/videos/ispyDemo.mp4";
-import milkDemo from "../../assets/videos/ispyDemo.mp4";
-import footballDemo from "../../assets/videos/ispyDemo.mp4";
-import workoutDemo from "../../assets/videos/ispyDemo.mp4";
+import milkDemo from "../../assets/videos/milkDemo.mp4";
+import footballDemo from "../../assets/videos/footballDemo.mp4";
+import workoutDemo from "../../assets/videos/workoutDemo.mp4";
 
 function PortfolioContainer(props) {
   return (
